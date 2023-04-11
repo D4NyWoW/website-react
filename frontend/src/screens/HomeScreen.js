@@ -1,11 +1,24 @@
-import data from "../data";
+import { useEffect, useState } from "react";
+// import data from "../data"; it's static data from
+// inseatd data.products.map we will use prooducts.products.map
+import axios from 'axios';
 import { Link } from "react-router-dom";
-// <a /> -> <Link />
+// fetchData -> ajax request
+
 function HomeScreen() {
-    return <div>
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+     const fetchData = async () => {
+       const result = await axios.get('/api/products');
+       setProducts(result.data);
+     };
+     fetchData();
+    }, []);
+    return ( 
+    <div>
         <h1>Featured Products</h1>
       <div className="products">
-        {data.products.map(product => (
+        {products.map((product) => (
           <div className="product" key={product.slug}>
             <Link to={`/product/${product.slug}`}> 
               <img src={product.image} alt={product.name}/>
@@ -21,6 +34,7 @@ function HomeScreen() {
         ))}
       </div>
     </div>
+    )
 }
 
 export default HomeScreen;
