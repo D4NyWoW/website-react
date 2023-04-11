@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 // inseatd data.products.map we will use prooducts.products.map
 import axios from 'axios';
 import { Link } from "react-router-dom";
+axios.defaults.baseURL = "http://localhost:5000"; // express base url
 // fetchData -> ajax request
 
 function HomeScreen() {
