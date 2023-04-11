@@ -2,5 +2,8 @@
   "dependencies": {
     "react-router-dom": "^6.10.0",
     "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
