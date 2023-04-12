@@ -20,6 +20,11 @@
    12. run npm start
 
 4. Manage State By Reducer Hook
+
    1. define reducer
    2. update fetch data
    3. get state from usReducer
+
+5. Add boostrap UI Framework
+   1. npm install react-bootstrap bootstrap
+   2. update App.s
