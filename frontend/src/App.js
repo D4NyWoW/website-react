@@ -7,7 +7,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import { LinkContainer } from "react-router-bootstrap";
 
-// <a href="/">amazona</a> -> <Link />
 function App() {
   return (
     <BrowserRouter>
