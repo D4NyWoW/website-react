@@ -12,12 +12,12 @@ app.get("/api/products", (req, res) => {
 });
 // backend api for returning product information based on the slug of the product
 app.get("/api/products/slug/:slug", (req, res) => {
-  const product = data.product.find((x) => x.slug === req.params.slug);
+  const product = data.products.find((x) => x.slug === req.params.slug);
   // if product exist return the product
   if (product) {
-    res.send(product);
+    return res.status(200).json({ product });
   } else {
-    res.status(404).send({ message: "Product Not Found" });
+    return res.status(404).json({ message: "Product Not Found" });
   }
 });
 
