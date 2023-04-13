@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Product from "../components/Product";
+import LoadingBox from "./LoadingBox";
+import MessageBox from "./MessageBox";
 axios.defaults.baseURL = "http://localhost:5000"; // express base url
 // fetchData -> ajax request
 // compare the type of action
@@ -50,9 +52,9 @@ function HomeScreen() {
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
-          <div>Loading..</div>
+          <LoadingBox />
         ) : error ? (
-          <div>{error}</div>
+          <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <Row>
             {products.map((product) => (
