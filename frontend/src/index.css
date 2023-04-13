@@ -19,6 +19,13 @@ main {
   flex: 1;
 }
 
+.btn-primary {
+  background-color: #ffc000;
+  color: #000000;
+}
+.rating span {
+  color: #ffc000;
+}
 .products {
   display: flex;
   flex-wrap: wrap;
