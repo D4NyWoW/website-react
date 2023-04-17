@@ -21,7 +21,7 @@ app.get("/api/products/slug/:slug", (req, res) => {
   }
 });
 
-app.get("/api/products/slug/:id", (req, res) => {
+app.get("/api/products/id/:id", (req, res) => {
   const product = data.products.find((x) => x.id === req.params.id);
   // if product exist return the product
   if (product) {
